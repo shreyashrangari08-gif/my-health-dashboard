@@ -1,27 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Smart Health</title>
-</head>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
 <body>
-    <div class="nav-bar">
-        <div onclick="alert('Home')">🏠 Home</div>
-        <div onclick="alert('Settings')">⚙️ Settings</div>
-        <div onclick="alert('Profile')">👤 Profile</div>
-    </div>
 
-    <h1>Smart Healthcare</h1>
+<div class="top-nav">
+    <div onclick="show('home')">🏠 Home</div>
+    <div onclick="show('settings')">⚙️ Settings</div>
+    <div onclick="show('profile')">👤 Profile</div>
+</div>
 
+<!-- Home Section -->
+<div id="home">
+    <h1>Smart Health</h1>
+    <div class="card">❤️ Heart Rate: 72 bpm <br> 🩸 Oxygen: 98%</div>
+    <button class="sos-btn">🚨 EMERGENCY SOS</button>
+</div>
+
+<!-- Settings Section -->
+<div id="settings" class="hidden">
+    <h2>Settings</h2>
     <div class="card">
-        <h3>Live Vitals</h3>
-        <p>❤️ Heart Rate: <span class="highlight">72 bpm</span></p>
-        <p>🩸 Oxygen: <span class="highlight">98%</span></p>
+        <p>🔔 Notifications: On</p>
+        <p>🔒 Privacy: Enabled</p>
+        <button onclick="alert('Logged Out!')">Logout</button>
     </div>
+</div>
 
-    <button class="sos-btn" onclick="alert('Emergency Alert Sent!')">🚨 EMERGENCY SOS</button>
+<!-- Profile Section -->
+<div id="profile" class="hidden">
+    <h2>My Profile</h2>
+    <div class="card">
+        <p>Name: Rahul Verma</p>
+        <p>Blood Group: O+</p>
+        <p>Age: 25</p>
+    </div>
+</div>
 
-    <script src="script.js"></script>
+<script>
+function show(id) {
+    document.getElementById('home').style.display = 'none';
+    document.getElementById('settings').style.display = 'none';
+    document.getElementById('profile').style.display = 'none';
+    document.getElementById(id).style.display = 'block';
+}
+</script>
 </body>
 </html>
