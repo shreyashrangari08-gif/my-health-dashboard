@@ -1,17 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Healthcare Dashboard</title>
     <style>
-        body { font-family: sans-serif; background: #f0f2f5; padding: 20px; text-align: center; }
-        .card { background: white; padding: 20px; margin: 15px auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 80%; max-width: 300px; }
-        h1 { color: #2c3e50; }
+        body { font-family: 'Segoe UI', sans-serif; background: #eef2f7; margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: auto; }
+        header { text-align: center; margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .card { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        .value { font-size: 22px; font-weight: bold; color: #2563eb; }
+        .label { font-size: 14px; color: #64748b; margin-top: 5px; }
+        .sos-btn { background: #ef4444; color: white; padding: 15px; border-radius: 10px; border: none; width: 100%; margin-top: 20px; font-weight: bold; font-size: 16px; }
     </style>
 </head>
 <body>
-    <h1>Smart Healthcare Dashboard</h1>
-    <div class="card"><h3>Heart Rate: 72 bpm</h3></div>
-    <div class="card"><h3>Oxygen Level: 98%</h3></div>
-    <div class="card"><h3>Status: Normal</h3></div>
+
+<div class="container">
+    <header>
+        <h1>Health Dashboard</h1>
+        <p>Welcome back, User!</p>
+    </header>
+
+    <div class="grid">
+        <div class="card"><div class="value">72 bpm</div><div class="label">Heart Rate</div></div>
+        <div class="card"><div class="value">98%</div><div class="label">Oxygen (SpO2)</div></div>
+        <div class="card"><div class="value">120/80</div><div class="label">Blood Pressure</div></div>
+        <div class="card"><div class="value">95 mg/dL</div><div class="label">Glucose</div></div>
+    </div>
+
+    <div class="card" style="margin-top: 20px; text-align: left;">
+        <h3>Upcoming Appointment</h3>
+        <p>Dr. Sharma - Cardiology Clinic</p>
+        <p><strong>Time:</strong> 04:00 PM, Today</p>
+    </div>
+
+    <button class="sos-btn">EMERGENCY SOS</button>
+</div>
+
 </body>
 </html>
-
