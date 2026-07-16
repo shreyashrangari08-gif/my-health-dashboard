@@ -5,38 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Healthcare Dashboard</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #eef2f7; margin: 0; padding: 20px; }
-        .container { max-width: 600px; margin: auto; }
-        header { text-align: center; margin-bottom: 20px; }
+        :root { --primary: #4f46e5; --bg: #f8fafc; --card: #ffffff; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #1e293b; }
+        .container { max-width: 500px; margin: auto; }
+        
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+        .profile-pic { width: 40px; height: 40px; background: #cbd5e1; border-radius: 50%; }
+
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .card { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
-        .value { font-size: 22px; font-weight: bold; color: #2563eb; }
-        .label { font-size: 14px; color: #64748b; margin-top: 5px; }
-        .sos-btn { background: #ef4444; color: white; padding: 15px; border-radius: 10px; border: none; width: 100%; margin-top: 20px; font-weight: bold; font-size: 16px; }
+        .card { background: var(--card); padding: 18px; border-radius: 20px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); text-align: center; border: 1px solid #e2e8f0; }
+        .value { font-size: 20px; font-weight: 800; color: var(--primary); }
+        .label { font-size: 12px; color: #64748b; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        .appointment-card { background: linear-gradient(135deg, #4f46e5, #3730a3); color: white; padding: 20px; border-radius: 20px; margin-top: 20px; }
+        
+        .sos-btn { background: #ef4444; color: white; padding: 18px; border-radius: 15px; border: none; width: 100%; margin-top: 25px; font-weight: bold; font-size: 18px; box-shadow: 0 4px 6px #fecaca; transition: 0.3s; }
+        .sos-btn:active { transform: scale(0.98); }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header>
-        <h1>Health Dashboard</h1>
-        <p>Welcome back, User!</p>
-    </header>
+    <div class="header">
+        <div>
+            <h2 style="margin:0;">Hello, User! 👋</h2>
+            <p style="margin:0; color:#64748b; font-size: 14px;">Your Health Status</p>
+        </div>
+        <div class="profile-pic"></div>
+    </div>
 
     <div class="grid">
-        <div class="card"><div class="value">72 bpm</div><div class="label">Heart Rate</div></div>
-        <div class="card"><div class="value">98%</div><div class="label">Oxygen (SpO2)</div></div>
-        <div class="card"><div class="value">120/80</div><div class="label">Blood Pressure</div></div>
-        <div class="card"><div class="value">95 mg/dL</div><div class="label">Glucose</div></div>
+        <div class="card"><div class="value">72 <small style="font-size:12px;">bpm</small></div><div class="label">Heart Rate</div></div>
+        <div class="card"><div class="value">98%</div><div class="label">Oxygen</div></div>
+        <div class="card"><div class="value">120/80</div><div class="label">BP</div></div>
+        <div class="card"><div class="value">95 <small style="font-size:12px;">mg/dL</small></div><div class="label">Glucose</div></div>
     </div>
 
-    <div class="card" style="margin-top: 20px; text-align: left;">
-        <h3>Upcoming Appointment</h3>
-        <p>Dr. Sharma - Cardiology Clinic</p>
-        <p><strong>Time:</strong> 04:00 PM, Today</p>
+    <div class="appointment-card">
+        <h3 style="margin:0;">Next Appointment</h3>
+        <p style="margin: 5px 0; opacity: 0.9;">Dr. Sharma - Cardiology Clinic</p>
+        <p style="margin:0; font-weight: bold;">Today, 04:00 PM</p>
     </div>
 
-    <button class="sos-btn">EMERGENCY SOS</button>
+    <button class="sos-btn">🚨 EMERGENCY SOS</button>
 </div>
 
 </body>
