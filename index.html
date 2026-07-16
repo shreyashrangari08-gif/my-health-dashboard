@@ -1,34 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <title>Smart Health</title>
 </head>
 <body>
-    <div class="top-nav">
-        <div>🏠 Home</div>
-        <div>⚙️ Settings</div>
-        <div>👤 Profile</div>
+    <div class="nav-bar">
+        <div onclick="alert('Home')">🏠 Home</div>
+        <div onclick="alert('Settings')">⚙️ Settings</div>
+        <div onclick="alert('Profile')">👤 Profile</div>
     </div>
 
     <h1>Smart Healthcare</h1>
-    
+
     <div class="card">
         <h3>Live Vitals</h3>
-        <p>❤️ Heart Rate: 72 bpm</p>
-        <p>🩸 Oxygen: 98%</p>
+        <p>❤️ Heart Rate: <span class="highlight">72 bpm</span></p>
+        <p>🩸 Oxygen: <span class="highlight">98%</span></p>
     </div>
 
-    <div class="card">
-        <h3>Today's Plan</h3>
-        <p>• Morning Yoga (7:00 AM)</p>
-        <p>• Medicine: Vitamin C (9:00 AM)</p>
-    </div>
+    <button class="sos-btn" onclick="alert('Emergency Alert Sent!')">🚨 EMERGENCY SOS</button>
 
-    <div class="card">
-        <h3>Doctor's Note</h3>
-        <p><i>"Keep hydrated and monitor your BP regularly."</i></p>
-    </div>
-
-    <button class="sos-btn">🚨 EMERGENCY SOS</button>
+    <script src="script.js"></script>
 </body>
 </html>
