@@ -3,51 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Healthcare Dashboard</title>
+    <title>Smart Health</title>
     <style>
-        :root { --primary: #4f46e5; --bg: #f8fafc; --card: #ffffff; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #1e293b; }
-        .container { max-width: 500px; margin: auto; }
-        
-        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
-        .profile-pic { width: 40px; height: 40px; background: #cbd5e1; border-radius: 50%; }
-
+        body { font-family: sans-serif; background: #f4f7f6; margin: 0; padding-bottom: 70px; }
+        .container { padding: 20px; }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .card { background: var(--card); padding: 18px; border-radius: 20px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); text-align: center; border: 1px solid #e2e8f0; }
-        .value { font-size: 20px; font-weight: 800; color: var(--primary); }
-        .label { font-size: 12px; color: #64748b; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
-
-        .appointment-card { background: linear-gradient(135deg, #4f46e5, #3730a3); color: white; padding: 20px; border-radius: 20px; margin-top: 20px; }
-        
-        .sos-btn { background: #ef4444; color: white; padding: 18px; border-radius: 15px; border: none; width: 100%; margin-top: 25px; font-weight: bold; font-size: 18px; box-shadow: 0 4px 6px #fecaca; transition: 0.3s; }
-        .sos-btn:active { transform: scale(0.98); }
+        .card { background: white; padding: 15px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; }
+        .val { font-size: 18px; font-weight: bold; color: #3b82f6; }
+        .nav { position: fixed; bottom: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 15px 0; border-top: 1px solid #ddd; }
+        .sos-btn { background: #ef4444; color: white; padding: 15px; border-radius: 15px; border: none; width: 100%; margin-top: 20px; font-weight: bold; }
+        .btn-small { background: #e0e7ff; color: #4338ca; border: none; padding: 10px; border-radius: 10px; width: 48%; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="header">
-        <div>
-            <h2 style="margin:0;">Hello, User! 👋</h2>
-            <p style="margin:0; color:#64748b; font-size: 14px;">Your Health Status</p>
-        </div>
-        <div class="profile-pic"></div>
+        <h2>Hi, User! 👋</h2>
+        <div style="width:40px; height:40px; background:#ddd; border-radius:50%;"></div>
     </div>
 
     <div class="grid">
-        <div class="card"><div class="value">72 <small style="font-size:12px;">bpm</small></div><div class="label">Heart Rate</div></div>
-        <div class="card"><div class="value">98%</div><div class="label">Oxygen</div></div>
-        <div class="card"><div class="value">120/80</div><div class="label">BP</div></div>
-        <div class="card"><div class="value">95 <small style="font-size:12px;">mg/dL</small></div><div class="label">Glucose</div></div>
+        <div class="card"><div class="val">72 bpm</div><div style="font-size:12px;">Heart Rate</div></div>
+        <div class="card"><div class="val">98%</div><div style="font-size:12px;">Oxygen</div></div>
     </div>
 
-    <div class="appointment-card">
-        <h3 style="margin:0;">Next Appointment</h3>
-        <p style="margin: 5px 0; opacity: 0.9;">Dr. Sharma - Cardiology Clinic</p>
-        <p style="margin:0; font-weight: bold;">Today, 04:00 PM</p>
+    <div style="margin-top:20px; display:flex; justify-content:space-between;">
+        <button class="btn-small">View Reports</button>
+        <button class="btn-small">Medications</button>
     </div>
 
     <button class="sos-btn">🚨 EMERGENCY SOS</button>
+</div>
+
+<div class="nav">
+    <span>🏠 Home</span>
+    <span>📅 Schedule</span>
+    <span>👤 Profile</span>
 </div>
 
 </body>
